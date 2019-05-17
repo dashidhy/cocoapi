@@ -286,6 +286,12 @@ class COCO:
                             plt.plot(x[sk],y[sk], linewidth=3, color=c)
                     plt.plot(x[v>0], y[v>0],'o',markersize=8, markerfacecolor=c, markeredgecolor='k',markeredgewidth=2)
                     plt.plot(x[v>1], y[v>1],'o',markersize=8, markerfacecolor=c, markeredgecolor=c, markeredgewidth=2)
+                # draw bbox
+                ax.add_patch(plt.Rectangle(xy=(ann['bbox'][0], ann['bbox'][1]),
+                                           width=ann['bbox'][2], 
+                                           height=ann['bbox'][3],
+                                           edgecolor=c,
+                                           fill=False, linewidth=2))
             p = PatchCollection(polygons, facecolor=color, linewidths=0, alpha=0.4)
             ax.add_collection(p)
             p = PatchCollection(polygons, facecolor='none', edgecolors=color, linewidths=2)
