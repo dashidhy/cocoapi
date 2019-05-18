@@ -29,3 +29,8 @@ rm -rf build
 python setup.py build_ext install
 rm -rf build
 ```
+
+# Python API Demo
+
+- [Data loading and visualization](https://github.com/dashidhy/cocoapi/blob/master/PythonAPI/pycocoDemo.ipynb)
+- [Evaluation](https://github.com/dashidhy/cocoapi/blob/master/PythonAPI/pycocoDemo.ipynb)
